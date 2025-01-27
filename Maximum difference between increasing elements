@@ -1,0 +1,19 @@
+class Main {
+    public static void main(String[] args) {
+        int arr[] = {3,6,1,4};
+        int n = arr.length;
+        int ans = -1;
+        for(int i=0;i<n-1;i++){
+            for(int j=i+1;j<n;j++){
+                int a = arr[i];
+                int b = arr[j];
+                if(a < b){
+                    int temp = b-a;
+                    ans = Math.max(ans,temp);
+                }
+            
+            }
+        }
+        System.out.print(ans);
+    }
+}
